@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Idroid';
+    src: url('fontes/idroid.otf') format('opentype'), url('fontes/idroid.otf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+
+    
+}
+/*main h1:
+
+Isso seleciona todos os elementos <h1> que estão contidos dentro de um elemento <main>.
+
+O seletor main h1 afetará todos os elementos <h1> que estão em qualquer nível de profundidade dentro do elemento <main>*/
+
+/*main > h1:
+
+Isso seleciona apenas o primeiro elemento <h1> que é um filho direto (primeiro nível de profundidade) do elemento <main>.
+O seletor main > h1 afetará apenas o primeiro elemento <h1> que é imediatamente aninhado dentro do <main>. Se você tiver a mesma estrutura como acima, o estilo será aplicado ao <h1> diretamente dentro do <main>, mas não ao <h1> dentro da seção.
+*/
+
+:root{
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    --fonte-padrao:Arial, Verdana,helvetica, sans-serif;
+    --fonte-destaque: unset;
+    --fonte-android:'Idroid', cursive ;
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:var(--cor0);
+    font-family: var(--fonte-padrao);
+ 
+    
+    
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3),var(--cor5));
+    background-color: var(--cor4);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
+header>h1{
+   
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.801);    
+    color: white;
+    font-family: var(--fonte-destaque);
+       
+    font-size: 3em;
+    margin-bottom: 30px;
+       
+}
+header>p{
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.801); 
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    color: white;
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px black;
+    
+}
+a.externo::after{
+    content: '\00A0\1F517';
+}
+nav>a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+nav>a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+    text-decoration: underline;
+}
+
+main{
+    min-width: 300px;
+    max-width:1000px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.568);
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+    background-color:white;
+}
+main img{
+    
+    width:100%;
+}
+main img.pequena{
+    display: block;
+    max-width: 350px;
+    margin: auto;
+}
+
+main h1{
+    color:var(--cor3) ;
+    font-family: var(--fonte-android);
+
+}
+main h2{
+    background-image: linear-gradient(to right, var(--cor1),transparent);
+   
+    font-family: var(--fonte-android);
+}
+main  p{
+    margin: 15px 0;
+    text-align: justify;
+    text-indent: 30px ;
+    line-height: 1em;
+
+}
+
+main strong{
+    color: #1a5c37;
+    font-weight: bold;
+    
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+footer{
+    background-color:var(--cor5);
+    color: white;
+    text-align: center;
+}
+
+aside>h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    
+    
+}
+aside{
+    
+    padding: 10px;
+    background-color:var(--cor1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px black;
+}
+
+aside ul{
+    list-style-type: '\2714\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+    
+    
+}
+
+div.video>iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
