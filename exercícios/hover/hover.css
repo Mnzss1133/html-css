@@ -1,0 +1,13 @@
+.botao{
+    text-align: center;
+    background: blue;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botao:hover{
+    background-color: red;
+    width: 150px;
+}
